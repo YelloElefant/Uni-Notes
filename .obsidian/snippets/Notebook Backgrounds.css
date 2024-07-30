@@ -11,6 +11,11 @@ Website used to generate Color Filters:
 https://angel-rs.github.io/css-color-filter-generator
                 
 ------------------------------------------------------------------------------*/
+* {
+  font-family: JetBrains Mono, monospace;
+  font-weight: 500;
+}
+
 
 /* Global Variables */
 :root {
@@ -77,11 +82,9 @@ https://angel-rs.github.io/css-color-filter-generator
   --pill-cover-hover: color-mix(in srgb, var(--accent-color) 60%, transparent);
   --background-modifier-border-focus: var(--accent-color);
   --background-modifier-border: var(--accent-color-trans);
-  --background-modifier-hover: color-mix(
-    in srgb,
-    var(--accent-color) 60%,
-    transparent
-  );
+  --background-modifier-hover: color-mix(in srgb,
+      var(--accent-color) 60%,
+      transparent);
 
   color: var(--accent-color);
   background-color: var(--page-color);
@@ -93,15 +96,13 @@ https://angel-rs.github.io/css-color-filter-generator
 .page-manila {
   --page-color: var(--page-manila);
   --accent-color: var(--pen-black);
-  --accent-color-trans: color-mix(
-    in srgb,
-    var(--accent-color) 15%,
-    transparent
-  );
-  --image-effect: brightness(0) saturate(100%) invert(14%) sepia(19%)
-    saturate(296%) hue-rotate(5deg) brightness(90%) contrast(96%);
+  --accent-color-trans: color-mix(in srgb,
+      var(--accent-color) 15%,
+      transparent);
+  --image-effect: brightness(0) saturate(100%) invert(14%) sepia(19%) saturate(296%) hue-rotate(5deg) brightness(90%) contrast(96%);
   color-scheme: light;
 }
+
 .embed-manila img {
   background-color: var(--page-manila);
 }
@@ -111,15 +112,13 @@ https://angel-rs.github.io/css-color-filter-generator
 .page-white {
   --page-color: var(--page-white);
   --accent-color: var(--neutral-pen-black);
-  --accent-color-trans: color-mix(
-    in srgb,
-    var(--accent-color) 15%,
-    transparent
-  );
-  --image-effect: brightness(0) saturate(100%) invert(14%) sepia(19%)
-    saturate(296%) hue-rotate(5deg) brightness(90%) contrast(96%);
+  --accent-color-trans: color-mix(in srgb,
+      var(--accent-color) 15%,
+      transparent);
+  --image-effect: brightness(0) saturate(100%) invert(14%) sepia(19%) saturate(296%) hue-rotate(5deg) brightness(90%) contrast(96%);
   color-scheme: light;
 }
+
 .embed-white img {
   background-color: var(--page-white);
 }
@@ -129,42 +128,34 @@ https://angel-rs.github.io/css-color-filter-generator
 .page-blueprint {
   --page-color: var(--page-blue);
   --accent-color: var(--pen-white);
-  --accent-color-trans: color-mix(
-    in srgb,
-    var(--accent-color) 15%,
-    transparent
-  );
-  --image-effect: brightness(0) saturate(100%) invert(89%) sepia(1%)
-    saturate(2714%) hue-rotate(196deg) brightness(107%) contrast(98%);
+  --accent-color-trans: color-mix(in srgb,
+      var(--accent-color) 15%,
+      transparent);
+  --image-effect: brightness(0) saturate(100%) invert(89%) sepia(1%) saturate(2714%) hue-rotate(196deg) brightness(107%) contrast(98%);
   color-scheme: dark;
 
   --link-color: color-mix(in srgb, var(--pen-light-blue) 60%, var(--pen-white));
-  --link-color-hover: color-mix(
-    in srgb,
-    var(--pen-light-blue) 20%,
-    var(--pen-white)
-  );
+  --link-color-hover: color-mix(in srgb,
+      var(--pen-light-blue) 20%,
+      var(--pen-white));
 }
+
 .embed-blueprint img {
   background-color: var(--page-blue);
 }
 
 /* Adds a grid layout on page background */
 .page-grid {
-  background-image: linear-gradient(
-      0deg,
+  background-image: linear-gradient(0deg,
       transparent 0px,
       var(--accent-color-trans) 1px,
       var(--accent-color-trans) 2px,
-      transparent 3px
-    ),
-    linear-gradient(
-      90deg,
+      transparent 3px),
+    linear-gradient(90deg,
       transparent calc(var(--grid-size) - 3px),
       var(--accent-color-trans) calc(var(--grid-size) - 2px),
       var(--accent-color-trans) calc(var(--grid-size) - 1px),
-      transparent var(--grid-size)
-    );
+      transparent var(--grid-size));
   background-size: var(--grid-size) var(--grid-size);
 }
 
@@ -173,38 +164,32 @@ https://angel-rs.github.io/css-color-filter-generator
     https://angel-rs.github.io/css-color-filter-generator */
 
 /* SVGs */
-:is(
-    .page-white,
-    .page-manila,
-    .page-blueprint,
-    .pen-white,
-    .pen-blue,
-    .pen-red,
-    .pen-green,
-    .pen-black,
-    .pen-gray,
-    .pen-purple
-  )
-  svg {
+:is(.page-white,
+  .page-manila,
+  .page-blueprint,
+  .pen-white,
+  .pen-blue,
+  .pen-red,
+  .pen-green,
+  .pen-black,
+  .pen-gray,
+  .pen-purple) svg {
   color: color-mix(in srgb, var(--accent-color) 60%, transparent);
 }
 
 /* Code Blocks */
 :is(.page-white, .page-manila, .page-blueprint) :is(code,
-.HyperMD-codeblock, .cm-inline-code) {
+  .HyperMD-codeblock, .cm-inline-code) {
   --code-normal: var(--accent-color);
-  --code-background: color-mix(
-    in srgb,
-    var(--page-color) 80%,
-    black
-  ) !important;
+  --code-background: color-mix(in srgb,
+      var(--page-color) 80%,
+      black) !important;
 }
-div > pre {
-  --code-background: color-mix(
-    in srgb,
-    var(--page-color) 80%,
-    black
-  ) !important;
+
+div>pre {
+  --code-background: color-mix(in srgb,
+      var(--page-color) 80%,
+      black) !important;
 }
 
 :is(.page-white, .page-manila, .page-blueprint) {
@@ -218,54 +203,53 @@ div > pre {
   --accent-color-trans: color-mix(in srgb, var(--pen-white) 15%, transparent);
   color: var(--accent-color);
   --hr-color: var(--accent-color);
-  --image-effect: brightness(0) saturate(100%) invert(89%) sepia(1%)
-    saturate(2714%) hue-rotate(196deg) brightness(107%) contrast(98%);
+  --image-effect: brightness(0) saturate(100%) invert(89%) sepia(1%) saturate(2714%) hue-rotate(196deg) brightness(107%) contrast(98%);
 }
+
 .pen-blue {
   --accent-color: var(--pen-blue);
   --accent-color-trans: color-mix(in srgb, var(--pen-blue) 15%, transparent);
   color: var(--accent-color);
   --hr-color: var(--accent-color);
-  --image-effect: brightness(0) saturate(100%) invert(36%) sepia(95%)
-    saturate(945%) hue-rotate(199deg) brightness(95%) contrast(95%);
+  --image-effect: brightness(0) saturate(100%) invert(36%) sepia(95%) saturate(945%) hue-rotate(199deg) brightness(95%) contrast(95%);
 }
+
 .pen-red {
   --accent-color: var(--pen-red);
   --accent-color-trans: color-mix(in srgb, var(--pen-red) 15%, transparent);
   color: var(--accent-color);
   --hr-color: var(--accent-color);
-  --image-effect: brightness(0) saturate(100%) invert(40%) sepia(41%)
-    saturate(1024%) hue-rotate(316deg) brightness(99%) contrast(94%);
+  --image-effect: brightness(0) saturate(100%) invert(40%) sepia(41%) saturate(1024%) hue-rotate(316deg) brightness(99%) contrast(94%);
 }
+
 .pen-green {
   --accent-color: var(--pen-green);
   --accent-color-trans: color-mix(in srgb, var(--pen-green) 15%, transparent);
   color: var(--accent-color);
   --hr-color: var(--accent-color);
-  --image-effect: brightness(0) saturate(100%) invert(52%) sepia(60%)
-    saturate(2521%) hue-rotate(105deg) brightness(96%) contrast(84%);
+  --image-effect: brightness(0) saturate(100%) invert(52%) sepia(60%) saturate(2521%) hue-rotate(105deg) brightness(96%) contrast(84%);
 }
+
 .pen-black {
   --accent-color: var(--pen-black);
   --accent-color-trans: color-mix(in srgb, var(--pen-black) 15%, transparent);
   color: var(--accent-color);
   --hr-color: var(--accent-color);
-  --image-effect: brightness(0) saturate(100%) invert(14%) sepia(19%)
-    saturate(296%) hue-rotate(5deg) brightness(90%) contrast(96%);
+  --image-effect: brightness(0) saturate(100%) invert(14%) sepia(19%) saturate(296%) hue-rotate(5deg) brightness(90%) contrast(96%);
 }
+
 .pen-gray {
   --accent-color: var(--pen-gray);
   --accent-color-trans: color-mix(in srgb, var(--pen-gray) 15%, transparent);
   color: var(--accent-color);
   --hr-color: var(--accent-color);
-  --image-effect: brightness(0) saturate(100%) invert(35%) sepia(13%)
-    saturate(189%) hue-rotate(5deg) brightness(96%) contrast(86%);
+  --image-effect: brightness(0) saturate(100%) invert(35%) sepia(13%) saturate(189%) hue-rotate(5deg) brightness(96%) contrast(86%);
 }
+
 .pen-purple {
   --accent-color: var(--pen-purple);
   --accent-color-trans: color-mix(in srgb, var(--pen-purple) 15%, transparent);
   color: var(--accent-color);
   --hr-color: var(--accent-color);
-  --image-effect: brightness(0) saturate(100%) invert(33%) sepia(59%)
-    saturate(2620%) hue-rotate(249deg) brightness(98%) contrast(93%);
+  --image-effect: brightness(0) saturate(100%) invert(33%) sepia(59%) saturate(2620%) hue-rotate(249deg) brightness(98%) contrast(93%);
 }

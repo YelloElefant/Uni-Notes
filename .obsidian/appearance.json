@@ -2,5 +2,9 @@
   "theme": "obsidian",
   "enabledCssSnippets": [
     "Notebook Backgrounds"
-  ]
+  ],
+  "cssTheme": "GitHub Theme",
+  "interfaceFontFamily": "JetBrainsMonoNL-Regular",
+  "textFontFamily": "JetBrainsMonoNL-Regular",
+  "monospaceFontFamily": "JetBrainsMonoNL-Regular"
 }

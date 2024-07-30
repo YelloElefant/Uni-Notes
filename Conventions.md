@@ -19,12 +19,12 @@ tags:
 
 ## Note page styling
 ---
-### Page Background Colors
+### Page Background Colours
 - White (`page-white`)
 - Manila/Tan (`page-manila`)
 - Blueprint (`page-blueprint`)
 
-### Pen Colors
+### Pen Colours
 - Black (`pen-black`)
 - Gray (`pen-gray`)
 - Red (`pen-red`)
@@ -34,6 +34,8 @@ tags:
 - White (`pen-white`)
 
 ### Other Classes
-- `recolor-images`: Recolors all images on the page to match the current pen color.
+- `recolor-images`: Recolours all images on the page to match the current pen colour.
 - `page-grid`: Adds grid lines to the page background.
 - `embed-<PAGE-COLOR>`: Adds the specified page colour as a background for all embedded images on a page.
+
+
